@@ -14,7 +14,7 @@ const initdb = async () =>
 
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
-  console.error('PUT into database');
+
   const jateDB = await openDB('jate', 1); // open connection to db (or create if not) "say hello to db"
 
   const tx = jateDB.transaction('jate', 'readwrite'); // db is recognized, request readwrite permission to db
@@ -30,8 +30,7 @@ export const putDb = async (content) => {
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
-  console.error('GET all from database'); //
-  
+
   const jateDB = await openDB("jate", 1);// creta connection
 
   const tx = jateDB.transaction("jate", 'readonly'); //request data access
